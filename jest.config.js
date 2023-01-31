@@ -12,15 +12,13 @@ module.exports = {
     },
   },
   cacheDirectory: '.jest/cache',
-  reporters: [
-    'default',
-    [
-      'jest-html-reporters',
-      {
-        publicPath: './reports',
-        filename: 'report.html',
-        expand: true,
-      },
-    ],
-  ],
+  "reporters": [
+    "default",
+    ["./node_modules/jest-html-reporter", {
+      "pageTitle": "Test Report",
+      "outputPath": "./test-report.html",
+      "includeFailureMsg": true,
+      "includeConsoleLog": true,
+    }]
+  ]
 };
