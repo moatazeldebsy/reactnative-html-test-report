@@ -1,0 +1,27 @@
+8da57df02542921f9c351f60f79f1b1c
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+require("react-native");
+var _react = _interopRequireDefault(require("react"));
+var _App = _interopRequireDefault(require("../App"));
+var _reactNative2 = require("@testing-library/react-native");
+var _jsxRuntime = require("react/jsx-runtime");
+describe('App', function () {
+  it('renders the input and add button', function () {
+    var _render = (0, _reactNative2.render)((0, _jsxRuntime.jsx)(_App.default, {})),
+      getByPlaceholderText = _render.getByPlaceholderText,
+      getByText = _render.getByText;
+    expect(getByPlaceholderText('Add a todo')).toBeTruthy();
+    expect(getByText('Add')).toBeTruthy();
+  });
+  it('adds a todo', function () {
+    var _render2 = (0, _reactNative2.render)((0, _jsxRuntime.jsx)(_App.default, {})),
+      getByPlaceholderText = _render2.getByPlaceholderText,
+      getByText = _render2.getByText;
+    var input = getByPlaceholderText('Add a todo');
+    _reactNative2.fireEvent.changeText(input, 'Buy milk');
+    var addButton = getByText('Add');
+    _reactNative2.fireEvent.press(addButton);
+    expect(getByText('Buy milk')).toBeTruthy();
+  });
+});
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJuYW1lcyI6WyJkZXNjcmliZSIsIml0IiwicmVuZGVyIiwiZ2V0QnlQbGFjZWhvbGRlclRleHQiLCJnZXRCeVRleHQiLCJleHBlY3QiLCJ0b0JlVHJ1dGh5IiwiaW5wdXQiLCJmaXJlRXZlbnQiLCJjaGFuZ2VUZXh0IiwiYWRkQnV0dG9uIiwicHJlc3MiXSwic291cmNlcyI6WyJBcHAtdGVzdC50c3giXSwic291cmNlc0NvbnRlbnQiOlsiLyoqXG4gKiBAZm9ybWF0XG4gKi9cblxuaW1wb3J0ICdyZWFjdC1uYXRpdmUnO1xuaW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JztcbmltcG9ydCBBcHAgZnJvbSAnLi4vQXBwJztcbmltcG9ydCB7cmVuZGVyLCBmaXJlRXZlbnR9IGZyb20gJ0B0ZXN0aW5nLWxpYnJhcnkvcmVhY3QtbmF0aXZlJztcblxuZGVzY3JpYmUoJ0FwcCcsICgpID0+IHtcbiAgaXQoJ3JlbmRlcnMgdGhlIGlucHV0IGFuZCBhZGQgYnV0dG9uJywgKCkgPT4ge1xuICAgIGNvbnN0IHtnZXRCeVBsYWNlaG9sZGVyVGV4dCwgZ2V0QnlUZXh0fSA9IHJlbmRlcig8QXBwIC8+KTtcbiAgICBleHBlY3QoZ2V0QnlQbGFjZWhvbGRlclRleHQoJ0FkZCBhIHRvZG8nKSkudG9CZVRydXRoeSgpO1xuICAgIGV4cGVjdChnZXRCeVRleHQoJ0FkZCcpKS50b0JlVHJ1dGh5KCk7XG4gIH0pO1xuXG4gIGl0KCdhZGRzIGEgdG9kbycsICgpID0+IHtcbiAgICBjb25zdCB7Z2V0QnlQbGFjZWhvbGRlclRleHQsIGdldEJ5VGV4dH0gPSByZW5kZXIoPEFwcCAvPik7XG4gICAgY29uc3QgaW5wdXQgPSBnZXRCeVBsYWNlaG9sZGVyVGV4dCgnQWRkIGEgdG9kbycpO1xuICAgIGZpcmVFdmVudC5jaGFuZ2VUZXh0KGlucHV0LCAnQnV5IG1pbGsnKTtcblxuICAgIGNvbnN0IGFkZEJ1dHRvbiA9IGdldEJ5VGV4dCgnQWRkJyk7XG4gICAgZmlyZUV2ZW50LnByZXNzKGFkZEJ1dHRvbik7XG5cbiAgICBleHBlY3QoZ2V0QnlUZXh0KCdCdXkgbWlsaycpKS50b0JlVHJ1dGh5KCk7XG4gIH0pO1xufSk7XG4iXSwibWFwcGluZ3MiOiI7QUFJQTtBQUNBO0FBQ0E7QUFDQTtBQUFnRTtBQUVoRUEsUUFBUSxDQUFDLEtBQUssRUFBRSxZQUFNO0VBQ3BCQyxFQUFFLENBQUMsa0NBQWtDLEVBQUUsWUFBTTtJQUMzQyxjQUEwQyxJQUFBQyxvQkFBTSxFQUFDLHFCQUFDLFlBQUcsS0FBRyxDQUFDO01BQWxEQyxvQkFBb0IsV0FBcEJBLG9CQUFvQjtNQUFFQyxTQUFTLFdBQVRBLFNBQVM7SUFDdENDLE1BQU0sQ0FBQ0Ysb0JBQW9CLENBQUMsWUFBWSxDQUFDLENBQUMsQ0FBQ0csVUFBVSxFQUFFO0lBQ3ZERCxNQUFNLENBQUNELFNBQVMsQ0FBQyxLQUFLLENBQUMsQ0FBQyxDQUFDRSxVQUFVLEVBQUU7RUFDdkMsQ0FBQyxDQUFDO0VBRUZMLEVBQUUsQ0FBQyxhQUFhLEVBQUUsWUFBTTtJQUN0QixlQUEwQyxJQUFBQyxvQkFBTSxFQUFDLHFCQUFDLFlBQUcsS0FBRyxDQUFDO01BQWxEQyxvQkFBb0IsWUFBcEJBLG9CQUFvQjtNQUFFQyxTQUFTLFlBQVRBLFNBQVM7SUFDdEMsSUFBTUcsS0FBSyxHQUFHSixvQkFBb0IsQ0FBQyxZQUFZLENBQUM7SUFDaERLLHVCQUFTLENBQUNDLFVBQVUsQ0FBQ0YsS0FBSyxFQUFFLFVBQVUsQ0FBQztJQUV2QyxJQUFNRyxTQUFTLEdBQUdOLFNBQVMsQ0FBQyxLQUFLLENBQUM7SUFDbENJLHVCQUFTLENBQUNHLEtBQUssQ0FBQ0QsU0FBUyxDQUFDO0lBRTFCTCxNQUFNLENBQUNELFNBQVMsQ0FBQyxVQUFVLENBQUMsQ0FBQyxDQUFDRSxVQUFVLEVBQUU7RUFDNUMsQ0FBQyxDQUFDO0FBQ0osQ0FBQyxDQUFDIn0=
