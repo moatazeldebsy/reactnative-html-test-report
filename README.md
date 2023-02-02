@@ -1,5 +1,8 @@
 # React Native Sample app to generate Html test report
 
+Read the blog post 
+https://bitrise.io/blog/post/generating-rich-format-test-results-with-build-artifacts
+
 Clone the repository then run the following steps: 
 
 `npm install`
